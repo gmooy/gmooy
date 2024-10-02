@@ -72,7 +72,10 @@ function getCookie(name)
 				abp.notify.error("Error! Harap Input Gmail");
 				return;
 			}
-			if (mails.filter(x => x).length > 1) return alert("Hanya bisa memasukan 1 Gmail");
+			if (mails.filter(x => x).length > 1) {
+				abp.notify.error("Terbatas! Input Maksimal 1 Gmail");
+				return;
+			}
 			transactionId = null;
 			$("#mail-progress-bar")[0].style.width = "0%";
 			$("#mail-progress-bar")[0].textContent = "0%";
