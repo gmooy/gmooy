@@ -28,7 +28,7 @@
 		padding:0;
 		margin:0;
 		color:#d9d9d9;
-		font-size:10px;
+		font-size:12px;
 		}
 
 		.btn-primary{
@@ -45,7 +45,7 @@
 
 		hr{
 		border: 1px solid #4d4d4d;
-		margin: 5px 0px 5px 0px;
+		margin: 20px 0px 20px 0px;
 		}
 
 		.flexi{
@@ -61,7 +61,7 @@
 		display:flex;
 		justify-content:center;			
 		position:relative;	
-		background: linear-gradient(to right, #262626 0%, #000000 100%);
+		background: #1E2F31;
 		}
 		
 		@media screen and (max-width: 1024px) {
@@ -83,11 +83,12 @@
 			border-radius:0px!important;
 			padding:0px 10px 0px 10px!important;	
 			border:none!important;
+			background: #1E2F31;
 			}
 			.appversion{display:none!important;
 			}
 			.title{
-			font-size:14px!important;
+			font-size:16px!important;
 			}
 		}
 
@@ -133,6 +134,14 @@
 		position:relative;
 		border-left: 1px solid #4d4d4d;
 		border-radius:5px;
+		}
+		
+		#check-btn:hover{
+		color: #00ff99!important;
+		}
+		
+		#clear-btn:hover{
+		color:#cc0066!important;
 		}
 
 		.CodeMirror{
@@ -247,27 +256,27 @@
 	<div class="flexi">
 		<div class="boxi">
 			<div class="gchecker">
-				<div style="display:flex;justify-content:left;align-items:center;margin-bottom:10px;">
+				<div style="display:flex;justify-content:left;align-items:center;margin-bottom:20px;">
 					<image style=";width:20px;height:20px;margin-right:10px;" src="gmail-checker.png"></image>
 					<p class="title"style="color:#ffffff;font-size:16px;">GMAIL CHECKER LITE V1.1</p>
 				</div>		
 				<div>
 					<p style="color:#ffffff;font-size:12px;">INPUT GMAIL</p>
-					<p id="format" style="font-size:10px;color:#cccccc;margin-bottom:5px; ">Format : <a style="font-family: Courier;font-size:12px;color:#00b3b3">user@gmail.com</a></p>
+					<p id="format" style="font-size:11px;color:#cccccc;margin-bottom:5px; ">Format : <a style="font-family: Courier;font-size:12px;color:#00b3b3">user@gmail.com</a></p>
 					<textarea id="mail-input" ></textarea>		
 				</div>
-				<div style="margin-top:5px">
+				<div style="margin-top:20px">
 					<p style="color:#ffffff;font-size:12px;">RESULT</p>
 					<textarea id="mail-output" style="color:green!important"></textarea>
 				</div>
-				<div style="display:flex;align-items:center;margin: 3px 0px 3px 0px">
+				<div style="display:flex;align-items:center;margin: 10px 0px 10px 0px">
 					<div class="progress progress-lg">
 				   <div id="mail-progress-bar" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
 					</div>
 				</div>
 				<div class="btn-executor">
-					<button onClick="refreshPage()" class="btn-primary" style="color:#800033;font-weight:700;">CLEAR</button>			
-					<button id="check-btn" class="btn-primary" style="color:#00ccff;font-weight:700;">RUN</button>
+					<button onClick="refreshPage()" id="clear-btn" class="btn-primary" style="color:#262626;font-weight:700;">CLEAR</button>			
+					<button id="check-btn" class="btn-primary" style="color:#262626;font-weight:700;">RUN</button>
 				</div>				
 			</div>
 			<div class="result">
