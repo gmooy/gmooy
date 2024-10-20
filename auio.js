@@ -129,6 +129,15 @@ function showUsingStatus() {
 
 showUsingStatus();
 
+function chunk(arr, number) {
+    let result = [];
+    let times = arr.length / number;
+    for (let i = 0; i < times; i++) {
+        result.push(arr.slice(i * number, (i + 1) * number));
+    }
+    return result;
+}
+
         // Update to global result
         allResult.good = [...allResult.good, ...result.filter(x => x.includes("Good|"))];
 		
