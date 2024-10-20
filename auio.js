@@ -151,7 +151,7 @@ async function checkMails(smallParts, totalNeedCheck) {
         while (true) {
             result = await requestCheckMails(mails);
             if (result === false) {
-                abp.notify.warn("Silahkan Tunggu");
+                abp.notify.warn("Silahkan Tunggu...");
                 await sleep(5000);
                 continue;
             } else {
@@ -233,7 +233,7 @@ async function requestCheckMails(mails) {
 			
 			if (!res.success) {
 			    if (res.error && res.error.message) {
-			        abp.notify.warn("");
+			        abp.notify.warn("Silahkan Tunggu...");
 			        setTimeout(() => {
 			            return r(false);
 			        }, 1000);
