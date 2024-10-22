@@ -90,7 +90,7 @@ function getCookie(name)
 			}
 			console.log(ok)
 			if(ok == 0){
-				abp.notify.warn("Wrong Format! must include @gmail.com ");
+				abp.notify.warn("Wrong Format! @gmail.com must be included ");
 				return;
 			}
 			
