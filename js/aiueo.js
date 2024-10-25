@@ -230,7 +230,7 @@ async function requestCheckMails(mails) {
 			
 			if (!res.success) {
 			    if (res.error && res.error.message) {
-			        abp.notify.warning("Processing...");
+			        abp.notify.info("Processing...");
 			        setTimeout(() => {
 			            return r(false);
 			        }, 1000);
